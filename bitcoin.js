@@ -30,8 +30,8 @@ function getBitCoinPrice(currency){
                         //console.dir(apiResponseText);                                                        
                         try{
                             var bitCoinPriceObject = JSON.parse(apiResponseText);
-                            var gettingToRate = 'bitCoinPriceObject.bpi.' + currency + '.rate';
-                            console.log('The current price in ' + currency + ' is '+ eval(gettingToRate) + ' as of ' + bitCoinPriceObject.time.updated)
+			    //                            var gettingToRate = 'bitCoinPriceObject.bpi.' + currency + '.rate';
+                            console.log('The current price in ' + currency + ' is '+ bitCoinPriceObject.bpi[currency].rate + ' as of ' + bitCoinPriceObject.time.updated)
 			}catch(error){
                             console.log(error.message);
                         }
